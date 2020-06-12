@@ -1,0 +1,302 @@
+/***** general style *****/
+
+@font-face {
+    font-family: shabnam;
+    src: url('../fonts/Shabnam-WOL.eot'), url('../fonts/Shabnam-WOL.woff2') format('woff2'), url('../fonts/Shabnam-WOL.woff') format('woff'), url('../fonts/Shabnam-WOL.ttf') format('truetype');
+    font-weight: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2b5bdf;
+    font-family: shabnam;
+    direction: rtl;
+}
+
+.header,
+.content {
+    visibility: hidden;
+}
+
+
+/***** header *****/
+
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: #5007e2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+header a img {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 20px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 300ms;
+    border-radius: 5px;
+}
+
+header nav ul li:hover {
+    background-color: #fff;
+    color: #4f1c7e;
+}
+
+header span {
+    margin-left: 20px;
+}
+
+header span i {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/***** content *****/
+
+.content {
+    display: flex;
+}
+
+
+/***** Right Side *****/
+
+.rightSide {
+    width: 50vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightSide table {
+    margin-top: 5px;
+    border-collapse: collapse;
+}
+
+.rightSide table td,
+.rightSide table th {
+    padding: 5px;
+}
+
+.rightSide form {
+    width: 80%;
+}
+
+.rightSide form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    outline: none;
+}
+
+.rightSide form input.submit {
+    background-color: #2da70e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.rightSide form input.submit:hover {
+    background-color: #069c06;
+}
+
+
+/***** Left Side *****/
+
+.leftSide {
+    width: 50vw;
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.leftSide .pic {
+    width: 100%;
+    height: 70%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftSide .pic img {
+    border-radius: 50%;
+}
+
+.leftSide .palette {
+    width: 100%;
+    height: 30%;
+}
+
+.leftSide .palette ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftSide .palette ul li {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 40px;
+    padding: 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.leftSide .palette ul li.yellow {
+    width: 50px;
+    height: 50px;
+    background: #7e5c08;
+    transition: 700ms;
+}
+
+.leftSide .palette ul li.yellow:hover {
+    border-radius: 50%;
+}
+
+.leftSide .palette ul li.green {
+    width: 50px;
+    height: 50px;
+    background: #088857;
+    transition: 700ms;
+}
+
+.leftSide .palette ul li.green:hover {
+    border-radius: 50%;
+}
+
+.leftSide .palette ul li.blue {
+    width: 50px;
+    height: 50px;
+    background: #a2c40b;
+    transition: 700ms;
+}
+
+.leftSide .palette ul li.blue:hover {
+    border-radius: 50%;
+}
+
+.leftSide .palette ul li.red {
+    width: 50px;
+    height: 50px;
+    background: #7c0713;
+    transition: 700ms;
+}
+
+.leftSide .palette ul li.red:hover {
+    border-radius: 50%;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .rightSide {
+        width: 100%;
+    }
+    .leftSide {
+        width: 100%;
+    }
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid #962121;
+    border-radius: 4px;
+    display: block;
+    width: 50%;
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: green;
+}
+
+.form-control.error input {
+    border-color: red;
+}
+
+.form-control small {
+    color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
